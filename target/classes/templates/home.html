@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header th:insert="blocks/header-main :: header"></header>
+
+
+    <div class="p-3 mb-2 bg-info text-white">Демонстрация работы.</div>
+    <div class="p-3 mb-2 bg-secondary text-white">Нажмите "Информация по рабочим" для получения детальной информации</div>
+
+    <div th:insert="blocks/footer-main :: footer"></div>
+</body>
+</html>

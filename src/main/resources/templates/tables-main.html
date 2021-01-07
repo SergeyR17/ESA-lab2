@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Рабочие и машины</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header th:insert="blocks/header-main :: header"></header>
+    <div class="p-3 mb-2 bg-info text-white">Данные:</div>
+    <div class="container mt-5">
+        <h1>Рабочие и машины:</h1>
+        <div th:each="el : ${workers}" class="alert alert-dark mt-2">
+            <div class="alert alert-primary" role="alert">
+            <h3 th:text="${el.personnelNumber}"/>
+            </div>
+
+             <p th:text="${el.fullName}"/>
+
+            <p  th:text="${el.category}"/>
+
+             <a  th:text=" ${el.machine.type}"/>
+        </div>
+    </div>
+
+
+
+
+    <div th:insert="blocks/footer-main :: footer"></div>
+    </body>
+</html>
